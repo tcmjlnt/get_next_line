@@ -1,5 +1,5 @@
 #include "get_next_line.h"
-
+// pas de segfault au NULL_CHECK du 1char avec cette version
 // Read line function
 char *ft_read_line(int fd, char *string, char *buffer)
 {
