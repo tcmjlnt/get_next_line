@@ -6,7 +6,7 @@
 /*   By: tjacquel <tjacquel@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/26 18:04:15 by tjacquel          #+#    #+#             */
-/*   Updated: 2024/09/27 22:44:39 by tjacquel         ###   ########.fr       */
+/*   Updated: 2025/09/10 18:29:49 by tjacquel         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,26 +121,26 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-// #include <stdio.h>
+#include <stdio.h>
 
-// int	main(void)
-// {
-// 	int		fd;
-// 	char	*str;
+int	main(void)
+{
+	int		fd;
+	char	*str;
 
-// 	fd = open("file.txt", O_RDONLY);
-// 	if (fd < 0)
-// 	{
-// 		perror("Error opening file");
-// 		return (1);
-// 	}
-// 	while ((str = get_next_line(fd)) != NULL)
-// 	{
-// 		printf("%s", str);
-// 		free(str);
-// 	}
-// 	//printf("\n");
-// 	close (fd);
-// 	free(str);
-// 	return (0);
-// }
+	fd = open("file.txt", O_RDONLY);
+	if (fd < 0)
+	{
+		perror("Error opening file");
+		return (1);
+	}
+	while ((str = get_next_line(fd)) != NULL)
+	{
+		printf("%s", str);
+		free(str);
+	}
+	//printf("\n");
+	close (fd);
+	free(str);
+	return (0);
+}
